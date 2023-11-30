@@ -6,5 +6,8 @@ public class Driver {
 		Scanner scanner = new Scanner(System.in);
 		String firstName = scanner.next();
 		user.addFirstName(firstName);
+		System.out.println("Enter Last Name: ");
+		String lastName = scanner.next();
+		user.addLastName(lastName);
 	}
 }
