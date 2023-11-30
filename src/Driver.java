@@ -12,5 +12,12 @@ public class Driver {
 		System.out.println("Enter Useremail: ");
 		String useremail = scanner.next();
 		user.matchEmail(useremail);
+		System.out.println("Enter Phonenumber: ");
+		String phonenumber = scanner.next();
+		user.matchPhone(phonenumber);
+		System.out.println("Enter Password: ");
+		String password = scanner.next();
+		user.checkPassword(password);
+		
 	}
 }

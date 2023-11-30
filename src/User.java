@@ -3,6 +3,8 @@ public class User {
 	String firstName;
 	String lastName;
 	String userEmail;
+	String phoneNumber;
+	String password;
 	public void addFirstName(String firstName) {
 		Pattern pattern = Pattern.compile("[A-Z][a-zA-Z]{2,}");
 		Matcher match = pattern.matcher(firstName);
@@ -34,6 +36,28 @@ public class User {
 		}
 		else {
 			System.out.println("Invalid Email");
+		}
+	}
+	public void matchPhone(String phoneNumber) {
+		Pattern pattern = Pattern.compile("[0-9]{2}\\s[0-9]{10}");
+		Matcher matcher = pattern.matcher(phoneNumber);
+		if(matcher.matches()) {
+			System.out.println("Valid Phone");
+			this.phoneNumber = phoneNumber;
+		}
+		else {
+			System.out.println("Invalid Phone");
+		}
+	}
+	public void checkPassword(String password) {
+		Pattern pattern = Pattern.compile("[a-zA-Z0-9@#.*^%=+]{8,}");
+		Matcher matcher = pattern.matcher(password);
+		if(matcher.matches()) {
+			System.out.println("Valid Password");
+			this.password = password;
+		}
+		else {
+			System.out.println("Invalid Password");
 		}
 	}
 }
