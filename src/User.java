@@ -50,7 +50,7 @@ public class User {
 		}
 	}
 	public void checkPassword(String password) {
-		Pattern pattern = Pattern.compile("^(?=.*[A-Z])[a-zA-Z0-9@#.*^%=+]{8,}$");
+		Pattern pattern = Pattern.compile("^(?=.*[A-Z])(?=.*\\d)[a-zA-Z0-9@#.*^%=+]{8,}$");
 		Matcher matcher = pattern.matcher(password);
 		if(matcher.matches()) {
 			System.out.println("Valid Password");
