@@ -9,5 +9,8 @@ public class Driver {
 		System.out.println("Enter Last Name: ");
 		String lastName = scanner.next();
 		user.addLastName(lastName);
+		System.out.println("Enter Useremail: ");
+		String useremail = scanner.next();
+		user.matchEmail(useremail);
 	}
 }
